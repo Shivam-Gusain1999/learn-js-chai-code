@@ -1,0 +1,35 @@
+body{
+    background: gray;
+}
+
+#link{
+    font-size: 20px;
+    margin: 50px;
+}
+
+#id1{
+    object-fit: cover;
+       width: 300px;
+    height: 300px;
+    margin:20px;
+}
+#id2{
+ object-fit: cover;
+       width: 300px;
+    height: 300px;
+     margin:20px;
+}
+
+#id3{
+ object-fit: cover;
+       width: 300px;
+    height: 300px;
+     margin:20px;
+}
+
+#id4{
+ object-fit: cover;
+       width: 300px;
+    height: 300px;
+     margin:20px;
+}

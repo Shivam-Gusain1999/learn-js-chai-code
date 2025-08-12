@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>editdelete</title>
+</head>
+<ul class="languages">
+    <li>
+        javascript
+    </li>
+</ul>
+
+<body>
+    <script>
+/*  function language(langs){
+    let shippa = document.querySelector('.languages')
+let li = document.createElement('li')
+li.innerHTML = `${langs}`
+shippa.appendChild(li)
+}
+language("python")
+language("golang")   ek tareeka ye hai pr espe travessing bahut hote hai    */
+
+
+function language(langs){
+    let shippa = document.querySelector('.languages')
+    let li = document.createElement('li')
+    let text = document.createTextNode(langs)
+   /* li.appendChild(document.createTextNode(langs)) */
+   li.appendChild(text)
+    shippa.appendChild(li)
+}
+language("pyhton");
+language("golang");
+language("php");
+
+
+/* edit */
+
+const shippa = (bhasa) =>{
+let secondchild = document.querySelector('li:nth-child(2)')
+secondchild.innerHTML = `${bhasa}`
+} 
+shippa('c++')
+
+const banna = (position, txt) =>{
+let thirdchild = document.querySelector(`li:nth-child(${position})`)
+if(thirdchild){
+thirdchild.textContent = txt;
+}
+} 
+banna(3, 'nodejsshippa')
+
+
+/* remove elements */ 
+
+let langremovee = document.querySelector(`li:nth-child(2)`).remove()
+
+    </script>
+</body>
+</html>

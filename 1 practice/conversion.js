@@ -46,12 +46,12 @@
 
 // console.log(typeof(NaN))
 
-// console.log(false == 0);  type conversion
-// console.log(false === 0)  strick conversion ye check karta hai ke type or value same hai kya yhn type alg alg hain false ka type boolean hai or 0 kaa type nmbr
+// console.log(false == 0);  //type conversion
+// console.log(false === 0)   //strick conversion ye check karta hai ke type or value same hai kya yhn type alg alg hain false ka type boolean hai or 0 kaa type nmbr
 
 // console.log(false == true)
 
-let shiv = ""
+let shiv = "" //empty string false aayege agr space hota tb true aata
 console.log(Boolean(shiv));
 
 

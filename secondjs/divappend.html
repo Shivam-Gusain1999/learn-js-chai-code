@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>append div</title>
+</head>
+<body>
+    <script>
+      const div = document.createElement ('div');
+      console.log(div)
+      div.style.backgroundColor = "orange"
+      div.className = "shippa"
+      div.id = Math.floor(Math.random()*10 +1) 
+div.setAttribute('title', 'kuch bhi')
+div.innerText = "my name is shivam"
+let textArea = document.createTextNode('village kyark')
+div.appendChild(textArea)
+
+let heading = document.createElement('h1')
+div.appendChild(heading)
+heading.innerText = "chai or code"
+let textheading = document.createTextNode('om namah shivay')
+heading.appendChild(textheading)
+heading.backgroundColor = "green"
+heading.className = "classh1"
+heading.style.color = "yellow"
+
+document.body.appendChild(div)
+
+
+
+
+    </script>
+</body>
+</html>
