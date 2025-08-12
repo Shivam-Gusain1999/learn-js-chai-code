@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project1</title>
+</head>
+<body>
+    <div class="home"><h3>home</h3></div>
+    <div class="ytchannel"><h3>ytchannel</h3></div>
+    <button class="btn">button1</button>
+    <button class="btn">button2</button>
+    <button class="btn">button3</button>
+    <button class="btn">button4</button>
+    <script>
+ let button = document.querySelectorAll('.btn')
+ let body = document.querySelector('body')
+ button.forEach((btn)=>{
+button[0].style.backgroundColor = "red"
+ button[1].style.backgroundColor = "green"
+ button[2].style.backgroundColor = "yellow"
+ button[3].style.backgroundColor = "blue"
+
+  btn.addEventListener('click', (e)=>{
+console.log(e)
+
+switch(e.target.innerHTML){
+case 'button1':
+body.style.backgroundColor = "green";
+break;
+case 'button2':
+body.style.backgroundColor = "yellow"
+break;
+case 'button3':
+body.style.backgroundColor = 'pink'
+break;
+case 'button4':
+body.style.backgroundColor = 'purple'
+break;
+
+default:
+body.style.backgroundColor - 'white'
+}
+  if(e.target.innerHTML === 'button1'){
+body.style.backgroundColor = "orange"
+  }
+
+ })
+ })
+ 
+
+
+    </script>
+</body>
+</html>

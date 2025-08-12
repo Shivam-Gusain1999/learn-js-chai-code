@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XHR API Shivam</title>
+</head>
+<body style="background-color: rgb(39, 26, 51);">
+  <div class="div" style="background-color: antiquewhite;">Hey my name is Shivam</div>
+  <button style="margin: 50px;" id="clickme">Click Me</button>
+  <p style="color: white;">Hey total followers are:</p>
+
+  <script>
+    const button = document.querySelector('#clickme');
+    const para = document.querySelector('p');
+
+    // Styling the button
+    button.style.backgroundColor = "red";
+    button.style.padding = "20px";
+    button.style.borderRadius = "10px";
+    button.style.color = "white";
+    button.style.fontSize = "16px";
+
+    button.addEventListener('click', function () {
+      const requestUrl = 'https://api.github.com/users/hiteshchoudhary';
+      const xhr = new XMLHttpRequest();
+
+      xhr.open('GET', requestUrl);
+
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          const data = JSON.parse(xhr.responseText);
+         // console.log(data);
+
+          // Update paragraph
+          para.textContent = `👤 Name: ${data.name} | 👥 Followers: ${data.followers} | 🆔 ID: ${data.id}`;
+
+          // Create and append image (after we have data)
+          const img = document.createElement('img');
+          img.src = data.avatar_url;
+          img.width = 100;
+          img.style.borderRadius = "50%";
+          img.style.marginTop = "20px";
+          document.body.appendChild(img);
+        }
+      };
+
+      xhr.send();
+    });
+  </script>
+</body>
+</html>
